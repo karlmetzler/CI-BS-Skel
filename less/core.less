@@ -1,0 +1,131 @@
+@linkColor: #ffc425;
+@hoverColor: #76daff;
+@textColor:#333;
+@headingFont: "BebasNeueRegular", sans-serif;
+@bodyFont: "TitilliumRegular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+
+// social media color variables
+@facebook: rgb(59,89,152);
+@twitter: rgb(85,172,238);
+@googleplus: rgb(221,75,57);
+@linkedin: rgb(0,123,181);
+@youtube: rgb(187,0,0);
+@instagram: rgb(18,86,136);
+@mail: rgb(187,0,0);
+
+@import 'bootstrap.less';
+
+// helper style -> REMOVE BEFORE LAUNCH
+.breakpoint {
+  position: fixed; z-index: 1000; bottom:12px; font-size: 16px; padding: 8px 32px;  background: white; opacity: .75; border-radius: 0 12px 12px 0;
+  transition: all .7s ease-out;
+}
+
+.large { color: red; }
+.medium { color: blue; }
+.small { color: green; }
+.x-small { color: orange; }
+
+// REMOVE HELPER STYLE BEFORE LAUNCH 
+
+
+body { color: @textColor; font-family: @bodyFont; padding-top: 70px; }
+h1,h2,h3,h4,h5 { font-family: @headingFont; }
+
+.social-icon { color: #FFFFFF; }
+a.social-link { font-size: 24px; margin: 0 4px;}
+span.social-icon { text-align: center; width: 44px; height: 44px; border-radius: 50%; display: inline-block; padding-top: 7px; }
+span.socicon-facebook { background: @facebook; }
+span.socicon-twitter { background: @twitter; }
+span.socicon-googleplus { background: @googleplus; }
+span.socicon-linkedin { background: @linkedin; }
+span.socicon-youtube { background: @youtube; }
+span.socicon-instagram { background: @instagram; }
+
+
+
+.add-top { margin-top: 28px; }
+
+// ------------ NAVBAR ------------//
+.navbar {
+  
+  .navbar-nav > li > a.social-link { padding: 15px 10px; font-size: 18px; }
+    
+  .social-icon { background: none; width: auto; height: auto; padding-top: 0; }
+  .socicon-facebook { color: @facebook; }
+  .socicon-twitter { color: @twitter; }
+  .socicon-googleplus {   color: @googleplus; }
+  .socicon-linkedin {  color: @linkedin; }
+  .socicon-youtube { color: @youtube; }
+  .socicon-instagram { color: @instagram; }
+  .socicon-mail { color: @mail; }
+  
+  .socicon-facebook:hover,
+  .socicon-twitter:hover,
+  .socicon-googleplus:hover,
+  .socicon-linkedin:hover,
+  .socicon-youtube:hover,
+  .socicon-instagram:hover,
+  .socicon-mail:hover { color: #222; }
+}
+
+
+//------------ MEDIA QUERIES ------------//
+
+// Extra Small //
+@media only screen and (max-width: @screen-sm){
+  .navbar {
+    
+    .navbar-nav.navbar-right { text-align: center; 
+      li { display: inline-block; 
+        a.social-link { font-size: 28px; }
+      }
+    }
+  }
+}
+
+// Smal //
+@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+
+}
+
+// Medium //
+@media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+
+}
+
+// Large //
+@media (min-width: @screen-lg-min) {
+  
+}
+
+@media print {
+
+}
+
+
+// ------------ FONTS ------------ //
+@font-face {
+    font-family: 'BebasNeueRegular';
+    src: url('../fonts/bebasneue/BebasNeue-webfont.eot');
+    src: url('../fonts/bebasneue/BebasNeue-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/bebasneue/BebasNeue-webfont.woff') format('woff'),
+         url('../fonts/bebasneue/BebasNeue-webfont.ttf') format('truetype'),
+         url('../fonts/bebasneue/BebasNeue-webfont.svg#bebasneueregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'TitilliumRegular';
+    src: url('../fonts/titillium/titillium-regular-webfont.eot');
+    src: url('../fonts/titillium/titillium-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/titillium/titillium-regular-webfont.woff') format('woff'),
+         url('../fonts/titillium/titillium-regular-webfont.ttf') format('truetype'),
+         url('../fonts/titillium/titillium-regular-webfont.svg#titilliumregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
